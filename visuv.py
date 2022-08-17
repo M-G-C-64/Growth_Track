@@ -54,9 +54,9 @@ def plot(path,smoothness=True, type='line', sheet_name=None):
 
 
 
-plot('growth_log/career/problem_solving.xlsx')
-plot('growth_log/health/nofap.xlsx', False, 'bar')
+plot('growth_log/career/problem_solving.xlsx', False, 'bar')
+plot('growth_log/health/nofap.xlsx')
 plot('growth_log/health/growth.xlsx')
-plot('growth_log/personality/self_help.xlsx', False, 'bar')
+plot('growth_log/personality/self_help.xlsx')
 
 
