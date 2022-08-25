@@ -15,9 +15,11 @@ def plot(path,smoothness=True, type='line', sheet_name=None):
     if smoothness and type == 'line':
         for i in (lst[1:]):
             try:
-                #print(var['Date'][0], var['Date'][var.index[-1]])
+    
+
                 index = pd.date_range(var['Date'][0], var['Date'][var.index[-1]])
                 df = pd.DataFrame(list(var[i]), index=index, columns=["values"])
+
                 fig, axe = plt.subplots(1,1, figsize=(10,5))
                 x = df.index
                 y = df.values
@@ -62,7 +64,7 @@ def plot(path,smoothness=True, type='line', sheet_name=None):
 
 
 plot('growth_log/career/problem_solving.xlsx', False, 'bar')
-plot('growth_log/health/nofap.xlsx')
+plot('growth_log/health/nofap.xlsx', False)
 plot('growth_log/health/growth.xlsx')
 plot('growth_log/personality/self_help.xlsx')
 plot('growth_log/misc/satisfaction.xlsx', False, 'bar')
